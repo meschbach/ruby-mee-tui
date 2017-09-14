@@ -24,6 +24,7 @@ Most basic usage:
 
 ```ruby
 require 'mee/tui'
+require 'curses'
 
 include MEE::TUI
 
@@ -51,6 +52,7 @@ It's fairly borning example.  Something like this is slightly more interesting:
 
 ```ruby
 require 'mee/tui'
+require 'curses'
 
 include MEE::TUI
 

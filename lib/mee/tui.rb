@@ -1,7 +1,9 @@
-require "mee/tui/version"
+require_relative 'tui/components'
+require_relative 'tui/core'
+require_relative 'tui/layouts'
+require_relative "tui/version"
 
 module MEE
   module TUI
-    # Your code goes here...
   end
 end
