@@ -1,7 +1,7 @@
 require "mee/tui/version"
 
-module Mee
-  module Tui
+module MEE
+  module TUI
     # Your code goes here...
   end
 end
