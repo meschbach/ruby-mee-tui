@@ -1,7 +1,3 @@
-require 'curses'
-require 'io/console'
-require 'logger'
-
 require 'mee/tui'
 
 include  MEE::TUI
@@ -30,8 +26,8 @@ class Readout < Screen
 	end
 end
 
+status = Readout.new
 begin
-	status = Readout.new
 	status.setup
 
 	( 0..100 ).each do
@@ -52,6 +48,6 @@ begin
 		sleep 0.25
 	end
 ensure
-	Curses.close_screen
+	status.done
 end
 

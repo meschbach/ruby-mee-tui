@@ -1,5 +1,4 @@
 require 'mee/tui'
-require 'curses'
 
 include MEE::TUI
 
@@ -14,11 +13,11 @@ class TestScreen < Screen
 	end
 end
 
+status = TestScreen.new
 begin
-	status = TestScreen.new
 	status.setup
 	status.draw
 	sleep 1
 ensure
-	Curses.close_screen
+	status.done
 end

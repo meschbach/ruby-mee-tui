@@ -1,4 +1,5 @@
 require_relative 'layouts'
+require 'curses'
 
 module MEE
 module TUI
@@ -125,6 +126,10 @@ class Screen < ComponentContainer
 
 	def layout_manager
 		VerticalLayoutManager.new
+	end
+
+	def done
+		Curses.close_screen
 	end
 end
 
