@@ -88,6 +88,11 @@ class ProgressDisplay < ComponentContainer
 		@current.value = @bar.completed
 		@limit.value = @bar.limit
 	end
+
+	def limit=( value )
+		@bar.limit = value
+		@limit.value = value
+	end
 end
 
 class LabledProgressDisplay < ProgressDisplay
