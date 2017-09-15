@@ -3,7 +3,7 @@ require_relative 'core'
 module MEE; module TUI
 
 class ProgressBar < Component
-	attr_accessor :limit
+	attr_accessor :limit, :progress
 
 	def initialize()
 		@progress = 0.0
@@ -87,6 +87,11 @@ class ProgressDisplay < ComponentContainer
 		@bar.increment amount
 		@current.value = @bar.completed
 		@limit.value = @bar.limit
+	end
+
+	def progress=( value )
+		@bar.progress = value
+		@current.value = value
 	end
 
 	def limit=( value )
